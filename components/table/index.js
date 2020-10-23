@@ -6,9 +6,9 @@ function Table(props) {
             <thead className="thead-light">
                 <tr>
                     <th scope="col"></th>
-                    <th scope="col">{props.firstHeader}</th>
-                    <th scope="col">{props.lastHeader}</th>
-                    <th scope="col">{props.emailHeader}</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
                 </tr>
             </thead>
             <Searchresults results={props.results} />
