@@ -3,9 +3,9 @@ import React from "react"
 function Searchbar(props) {
     return (
         <form className="search">
-            <div className="form-group row col-md-6">
-                <label htmlFor="name" className="col-form-label col-md-4">Search by Name</label>
-                <div className="col-md-8">
+            <div className="form-group row col-lg-12 col-md-10 col-sm-8">
+          <label htmlFor="name" className="col-form-label col-md-4 text-center">Search by Name</label>
+          <div className="col-md-6 px-0">
                     <input
                         type="email"
                         value={props.search}
@@ -17,7 +17,9 @@ function Searchbar(props) {
                         id="inputEmail4"
                     />
                 </div>
-
+                <div className="col-md-2 mx-0 px-0">
+          <button type="reset" onClick={props.handleReset} className="btn btn-secondary col-2">X</button>
+          </div>
             </div>
         </form>
     );
