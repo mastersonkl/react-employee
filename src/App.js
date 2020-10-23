@@ -5,6 +5,7 @@ import Searchbar from './components/searchbar'
 import Wrapper from "./components/wrapper"
 import Table from "./components/table"
 
+
 function App() {
   return (
     <Router>
