@@ -7,7 +7,6 @@ function Main() {
     const [employee, setEmployee] = useState({})
     const [employees, setEmployees] = useState([])
     const [employeeIndex, setEmployeeIndex] = useState(0)
-
 }
 
-export default Main
+export default Main 
