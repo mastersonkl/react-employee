@@ -56,7 +56,7 @@ function Main() {
         }
 
         newArray = newArray.filter(item => {
-            return item.firstName.toLowerCase().includes(search.toLocaleLowerCase()) || item.lastName.toLowerCase().includes(search.toLocaleLowerCase())
+            return item.firstName.includes(search) || item.lastName.includes(search)
         })
 
         return newArray

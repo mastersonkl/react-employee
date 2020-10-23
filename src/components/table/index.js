@@ -1,5 +1,5 @@
 import React from "react"
-import Searchresults from "../Searchresults"
+import Searchresults from "../searchresults"
 import SortBtn from "../sortBtn"
 
 function Table(props) {
