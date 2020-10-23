@@ -10,7 +10,7 @@ function Searchbar(props) {
                         type="email"
                         value={props.search}
                         onChange={props.handleInputChange}
-                        name="name"
+                        name="search"
                         list="names"
                         className="form-control"
                         placeholder="Search All Employees Here"

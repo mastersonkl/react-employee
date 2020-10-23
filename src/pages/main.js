@@ -7,10 +7,35 @@ import Table from "../components/table"
 function Main() {
     const [employees, setEmployees] = useState([])
 
+    const [search, setSearch] = useState("")
+
+    const handleInputChange = e => {
+        let value = e.target.value
+        setSearch(value)
+    }
 
     useEffect(() => {
         loadEmployees()
     }, [])
+
+
+    function employeeSearch() {
+        let newArray = [...employees]
+
+        if (employees.length === 0) {
+            return newArray
+        }
+        if (search === "") {
+            return newArray
+        }
+
+        newArray = newArray.filter(item => {
+            return item.firstName.includes(search)
+        })
+
+        return newArray
+    }
+
 
     function loadEmployees() {
         API.fetchEmployees()
@@ -33,8 +58,8 @@ function Main() {
 
     return (
         <div>
-            <Searchbar />
-            <Table results={employees} />
+            <Searchbar handleInputChange={handleInputChange} search={search} />
+            <Table results={employeeSearch()} />
         </div>
     )
 }
