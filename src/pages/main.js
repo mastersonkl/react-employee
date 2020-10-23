@@ -14,6 +14,30 @@ function Main() {
         setSearch(value)
     }
 
+    function handleReset() {
+        setSearch("")
+    }
+
+    const handleBtnClick = e => {
+        let btnType = e.target.attributes.getNamedItem("data-value".value)
+        let newArray = [...employees]
+
+        if (btnType === "fist-name-sort") {
+            newArray = newArray.sort()
+            console.log("sort first name", newArray)
+            return newArray
+        }
+        if (btnType === "last-name-sort") {
+            newArray = newArray.sort()
+            newArray = newArray.reverse()
+            console.log("sort last name", newArray)
+            return newArray
+        }
+        return newArray
+    }
+
+
+
     useEffect(() => {
         loadEmployees()
     }, [])
@@ -58,8 +82,8 @@ function Main() {
 
     return (
         <div>
-            <Searchbar handleInputChange={handleInputChange} search={search} />
-            <Table results={employeeSearch()} />
+            <Searchbar handleInputChange={handleInputChange} handleReset={handleReset} search={search} />
+            <Table results={employeeSearch()} handleBtnClick={handleBtnClick}/>
         </div>
     )
 }

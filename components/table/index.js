@@ -11,7 +11,7 @@ function Table(props) {
                     <th scope="col">Email</th>
                 </tr>
             </thead>
-            <Searchresults results={props.results} />
+            <Searchresults results={props.results} handleBtnClick={props.handleBtnClick} />
         </table>
     )
 }
