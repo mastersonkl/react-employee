@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom"
 import Navbar from "./components/navbar"
-import Searchbar from './components/searchbar'
+// import Searchbar from './components/searchbar'
+import Main from "./pages/main"
 import Wrapper from "./components/wrapper"
-import Table from "./components/table"
+// import Table from "./components/table"
 
 
 function App() {
@@ -12,8 +13,7 @@ function App() {
       <div>
         <Navbar />
         <Wrapper>
-          <Searchbar />
-          <Table />
+          <Main />
         </Wrapper>
       </div>
     </Router>
